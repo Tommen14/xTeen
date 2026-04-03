@@ -1,0 +1,377 @@
+/* Made By Tommen_14 */
+
+body {
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    background-image: linear-gradient(to bottom right, #494fa1, #6d8aea, #494fa1);
+}
+
+#dark {
+
+    position: fixed;
+    top: -5vh;
+    height: 110vh;
+    width: 100%;
+    background-color: black;
+    z-index: 3;
+    opacity: 0.9;
+
+}
+
+.hide { display: none; }
+
+.show {
+
+    animation: get_up 2s;
+    display: block;
+    margin: auto;
+
+}
+
+body::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+#Navbar {
+
+    border: none;
+    border-bottom: solid 1px #16164F;
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(70, 80, 230, 0.6);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    padding-left: 5%;
+    padding-top: 0;
+    top: 0;
+    z-index: 1;
+
+}
+
+#discover_container {
+    position: relative;
+}
+
+.discover_video {
+    display: block;
+    margin: auto;
+    width: 92%;
+    box-shadow: 0px 0px 200px #09093f;
+    animation: fade-in 0.5s;
+}
+
+@keyframes fade-in {
+    0% { transform: translateY(5%); }
+}
+
+.discover_control {
+    width: 70px;
+    height: 70px;
+    overflow: visible;
+    margin-right: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: white 2px solid;
+    background-color: rgba(225, 225, 225, 0.8);
+}
+
+#effect_left {
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    top: 0;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+#effect_right {
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+#controls_container {
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+}
+
+#titolo {
+
+    margin-top: 3.5vh;
+    font-size: 40px;
+
+}
+
+.fascia {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#keep_text {
+    margin-bottom: 25px;
+    margin-top: 60px;
+    margin-left: 30px;
+}
+
+.continue_fascia {
+    scrollbar-width: none;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    gap: 30px;
+    margin: 0 10px;
+}
+
+.continue_watch { animation: continue_appear 0.5s linear; }
+
+@keyframes continue_appear {
+    0% { transform: translateY(-20%); }
+    100% {}
+}
+
+.watch {
+
+    position: relative;
+    margin: 10px;
+    width: 408px;
+    height: 230px;
+    border-radius: 20px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    z-index: 0;
+    object-fit: cover;
+
+}
+
+.watch_alt {
+    position: relative;
+    width: 326.4px;
+    height: 184px;
+    border-radius: 20px;
+    margin-top: 0;
+    margin-bottom: 4%;
+    z-index: 0;
+}
+
+.watch:hover, .watch_alt:hover {
+    box-shadow: 0px 0px 30px #16164F;
+}
+
+.add_list {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: solid 1px white;
+    background-color: #5a5adc;
+    color: white;
+    font-size: 18px;
+    animation: add_norm 0.5s linear;
+}
+
+.add_clicked { animation: add_clicked 0.5s linear; }
+
+@keyframes add_clicked {
+    0% {}
+    100% {transform: rotateZ(360deg);}
+}
+@keyframes add_norm {
+    0% {}
+    100% {transform: rotateZ(-360deg);}
+}
+
+#window {
+
+    position: absolute;
+    border-radius: 80px;
+    background-color: rgb(39, 39, 56);
+    z-index: 4;
+    width: 90vw;
+    left: 5vw;
+    top: 8vh;
+
+}
+
+#episodies_container {
+    scrollbar-width: none;
+    position: relative;
+    margin: 8%;
+    padding: 60px 2%;
+    font-size: 200%;
+    border: solid 2px #4949ba;
+    border-radius: 40px;
+}
+
+.poster {
+
+    margin-left: 5%;
+    box-shadow: 0px 0px 80px #16164F;
+    border-radius: 20px;
+    margin-top: 5%;
+    z-index: 0;
+    width: 90%;
+
+}
+
+#report_title {
+
+    margin-top: 10vh;
+    text-align: center;
+    font-size: 48px;
+
+}
+
+.season_divide {
+    margin: 100px 0 45px 40px;
+}
+
+.num_ep_cont {
+    position: relative;
+    text-align: left;
+    font-size: 20px; 
+    background-image: linear-gradient(150deg, #4949ba, #5d5dbc);
+    margin: 30px 15px;
+    padding: 10px;
+    padding-left: 75px;
+    border-radius: 20px;
+}
+
+.num_ep { cursor: pointer; width: fit-content; }
+
+.number_episode {
+    position: absolute;
+    top: -5px;
+    left: 15px;
+    text-align: center;
+    align-self: center;
+    padding: 10px;
+    background-color: blue;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#report_ep {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 100px;
+}
+
+
+@keyframes get_up {
+    
+    0% {opacity: 0%; position: absolute; top: 100%;}
+    100% {opacity: 100%; position: absolute;}
+
+}
+
+
+@media (max-width: 1200px) {
+
+    .watch {
+        width: 344px;
+        height: 193.6px;
+        z-index: 0;
+    }
+
+    .watch_alt {
+        width: 275px;
+        height: 155px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+
+    body { font-size: 10px; }
+
+    #Navbar {z-index: 1;}
+
+    #dark {
+        z-index: 3;
+    }
+    
+    #discover_container { display: none; }
+
+    #keep_text { margin-top: 130px; }
+    
+    .season_divide { margin: 80px 0 45px 10px; }
+
+    #report_ep { font-size: 20px; }
+
+    .watch { margin-top: 40px; }
+
+    .fascia { margin-top: 15vh; }
+
+    .add_list { top: 50px; }
+
+    #window {
+        border-radius: 20px;
+        top: 8vh;
+    }
+
+    #report_title {
+        font-size: 30px;
+        margin-top: 5vh;
+    }
+
+    .poster {
+
+        margin-top: 7%;
+        margin-left: 5%;
+        width: 90%;
+
+    }
+
+    .num_ep_cont { font-size: 18px; }
+
+}
+
+@media (min-width: 1900px) {
+
+    .watch {
+
+        width: 503px;
+        height: 283px;
+        border-radius: 20px;
+        margin-top: 4%;
+    
+    }
+
+    #titolo {
+
+        margin-top: 3vh;
+        font-size: 50px;
+    
+    }
+
+    #report_title {
+
+        font-size: 60px;
+        text-align: center;
+    
+    }
+
+    .num_ep_cont { font-size: 30px; padding-left: 100px; }
+
+    .number_episode { top: -15px; width: 30px; height: 30px; }
+
+
+}
+
+@media (pointer: coarse) { 
+    .watch_alt, .watch:hover { box-shadow: none; } 
+}

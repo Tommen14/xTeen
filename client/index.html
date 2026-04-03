@@ -1,0 +1,56 @@
+<!-- Made by Tommen_14 -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#494fa1">
+    <meta name="apple-mobile-web-app-captable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="blac-translucent">
+    <title>xTeen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+    <div id="window" class="hide">
+
+        <img src="" alt="poster" id="poster" class="poster" tabindex="0">
+
+        <video class="poster hide" id="trailer" playsinline controls loading="lazy" preload="metadata"></video>
+
+        <h1 id="report_title"></h1>
+        <h2 id="report_ep"></h1>
+
+        <div id="episodies_container"></div>
+
+    </div>
+
+    <div id="dark" class="hide"></div>
+
+    <div id="Navbar">
+        <h1 id="titolo">xTeen</h1>
+    </div>
+
+    <div id="discover_container">
+        <video class="discover_video" id="discover_video" autoplay muted loading="lazy" preload="metadata" playsinline></video>
+        <img class="discover_video" id="discover_image">
+        <div id="effect_left"></div>
+        <div id="controls_container">
+            <img src="assets/images/Play_Button.png" class="discover_control" id="play_button" tabindex="0">
+            <img src="assets/images/Mute.png" class="discover_control" id="audio_button" tabindex="0">
+        </div>
+        <div id="effect_right"></div>
+    </div>
+
+    <div id="continue_container" class="hide">
+        <h2 class="continue_decorations" id="keep_text">Continua a guardare</h2>
+        <div id="continue_fascia" class="continue_fascia"></div>
+        <hr class="continue_decorations">
+    </div>
+    <div id="Fascia" class="fascia"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
