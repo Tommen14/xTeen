@@ -1,0 +1,5 @@
+node_modules/
+server/node_modules
+server/watching_memory.json
+.DS_Store
+Thumbs.db
